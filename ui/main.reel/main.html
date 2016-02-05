@@ -32,9 +32,13 @@
                 "enabled": true,
                 "label": "New Task"
             },
+            "_dev": {
+                "comment": "New Task button"
+            },
             "listeners": [
                 {
                     "type": "action",
+                    "useCapture": false,
                     "listener": {"@": "actionEventListener"}
                 }
             ]
