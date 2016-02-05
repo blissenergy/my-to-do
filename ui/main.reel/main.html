@@ -23,23 +23,31 @@
                 "isHidden": true
             }
         },
-        "button": {
-            "prototype": "digit/ui/button.reel",
+        "actionEventListener2": {
+            "prototype": "montage/core/event/action-event-listener",
             "properties": {
-                "contenteditable": "true",
-                "dir": "ltr",
-                "draggable": "true",
-                "enabled": true,
-                "label": "New Task"
+                "action": "myFunction",
+                "handler": {"@": "rangeController"}
             },
             "_dev": {
-                "comment": "New Task button"
+                "isHidden": true
+            }
+        },
+        "button": {
+            "prototype": "montage/ui/button.reel",
+            "properties": {
+                "element": {"#": "button"},
+                "enabled": true,
+                "formenctype": "application/x-www-form-urlencoded",
+                "formmethod": "get",
+                "label": "Button",
+                "type": "button"
             },
             "listeners": [
                 {
                     "type": "action",
-                    "useCapture": false,
-                    "listener": {"@": "actionEventListener"}
+                    "useCapture": true,
+                    "listener": {"@": "actionEventListener2"}
                 }
             ]
         },
@@ -50,7 +58,10 @@
                 "contentController": {"@": "rangeController"},
                 "contenteditable": "true",
                 "dir": "ltr",
-                "draggable": "true"
+                "draggable": "true",
+                "formenctype": "application/x-www-form-urlencoded",
+                "formmethod": "get",
+                "type": "button"
             }
         },
         "rangeController": {
