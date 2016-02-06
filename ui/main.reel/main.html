@@ -110,6 +110,19 @@
                 "task": {"<-": "@list:iteration.object"}
             }
         },
+        "textArea": {
+            "prototype": "digit/ui/text-area.reel",
+            "properties": {
+                "element": {"#": "textArea"},
+                "contenteditable": "true",
+                "dir": "ltr",
+                "draggable": "true",
+                "placeholderValue": "Fill in the blanks.",
+                "spellcheck": true,
+                "title": "My Title Today",
+                "value": "Text"
+            }
+        },
         "title": {
             "prototype": "digit/ui/title.reel",
             "properties": {
@@ -132,6 +145,7 @@
 
         </button>
         <output data-montage-id="badge"></output>
+        <textarea data-montage-id="textArea"></textarea>
         <ul data-montage-id="list">
             <li data-montage-id="task1"></li>
         </ul>
