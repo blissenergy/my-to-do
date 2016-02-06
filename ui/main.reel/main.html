@@ -33,6 +33,17 @@
                 "isHidden": true
             }
         },
+        "badge": {
+            "prototype": "digit/ui/badge.reel",
+            "properties": {
+                "contenteditable": "true",
+                "dir": "ltr",
+                "draggable": "true"
+            },
+            "bindings": {
+                "value": {"<-": "@rangeController.organizedContent.filter{!completed}.length"}
+            }
+        },
         "button": {
             "prototype": "montage/ui/button.reel",
             "properties": {
@@ -117,7 +128,10 @@
         <h1 data-montage-id="title">
 
         </h1>
-        <button data-montage-id="button"></button>
+        <button data-montage-id="button">
+
+        </button>
+        <output data-montage-id="badge"></output>
         <ul data-montage-id="list">
             <li data-montage-id="task1"></li>
         </ul>
